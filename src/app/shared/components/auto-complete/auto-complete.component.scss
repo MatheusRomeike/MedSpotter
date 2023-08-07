@@ -1,0 +1,35 @@
+.autoComplete {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    overflow-y: scroll;
+    max-height: 225px;
+    display: inline-block;
+}
+
+.autoCompleteItem {
+    color: gray;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+    width: 100%;
+    font-size: 16px;
+}
+
+.autoCompleteItemSubName {
+    color: gray;
+    font-size: 13px;
+}
+
+.autoCompleteBox {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 12px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.autoCompleteBox:hover {
+    background-color: #eee;
+}
