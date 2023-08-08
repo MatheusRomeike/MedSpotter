@@ -16,7 +16,9 @@
 }
 
 .navbar-brand {
-  margin-left: 50px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (min-width: 992px) {
@@ -32,10 +34,6 @@
 @media screen and (max-width: 991px) {
   .container-fluid {
     box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
-  }
-
-  .navbar-expand-lg {
-    padding-bottom: 0;
   }
 
   .navbar-collapse {
@@ -55,6 +53,6 @@
 }
 
 .logo {
-  width: 160px;
+  width: 150px;
   height: auto;
 }
