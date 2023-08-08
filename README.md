@@ -23,7 +23,7 @@ switch pra selecionar tipo (paciente ou profissional)
 
 -comp. sidebar ++
 inicio e sair
-paciente: agendar, historico e perfil
+paciente: agendar, historico, perfil e dependente
 profissional: agenda, historico, perfil
 
 -cadastro informacoes medico ++++

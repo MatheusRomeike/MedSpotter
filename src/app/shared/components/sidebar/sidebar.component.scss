@@ -1,60 +1,49 @@
-.nav-item {
-  align-self: center !important;
-  margin-right: 20px;
-}
-
-.nav-link {
-  color: #000;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-link:hover {
-  color: #aca000;
-}
-
-.navbar-brand {
-  margin-left: 50px;
-}
-
-@media screen and (min-width: 992px) {
-  .navbar-collapse {
-    margin-right: 30px;
-  }
-
-  .navbar-expand-lg {
-    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .container-fluid {
-    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
-  }
-
-  .navbar-expand-lg {
-    padding-bottom: 0;
-  }
-
-  .navbar-collapse {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    background-color: #f8f9fa;
-  }
-
-  .nav-item {
-    height: 60px;
-    display: flex;
-    align-items: center;
-  }
+.column {
+  border-right: 1px solid rgba(22, 22, 22, 0.24);
+  padding: 20px 0 0 31px;
+  width: 223px;
 }
 
 .logo {
-  width: 160px;
+  width: 96px;
   height: auto;
+}
+
+.node {
+  display: flex;
+  flex-direction: column;
+}
+
+.node p {
+  font-size: 12px;
+  color: rgb(102, 102, 102);
+  justify-self: center;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+}
+
+.ng-fa-icon {
+  padding-right: 5px;
+}
+
+.ng-fa-icon,
+a {
+  color: rgb(102, 102, 102);
+  font-size: 14px;
+}
+
+.active > * {
+  color: blue;
+  text-decoration: underline;
+}
+
+.active {
+  color: blue;
+  text-decoration: underline;
 }

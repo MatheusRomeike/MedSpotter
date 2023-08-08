@@ -1,3 +1,55 @@
-<div class="column">
-  <p></p>
+<div class="column h-100">
+  <a href="/">
+    <img
+      class="logo"
+      src="../../../../../assets/images/nav-logo.svg"
+      alt="Logo"
+    />
+  </a>
+
+  <div class="node mt-5">
+    <p>Menu</p>
+    <a href="/"><fa-icon [icon]="faHouse"></fa-icon>Início</a>
+    <div [ngSwitch]="'paciente'" class="d-flex flex-column">
+      <ng-container *ngSwitchCase="'paciente'">
+        <a href="/agendar-paciente"
+          ><fa-icon [icon]="faCalendarCheck"></fa-icon>Agendar</a
+        >
+        <a href="/historico-paciente"
+          ><fa-icon [icon]="faClockRotateLeft"></fa-icon>Histórico</a
+        >
+      </ng-container>
+      <ng-container *ngSwitchCase="'profissional'">
+        <a href="/agenda-profissional"
+          ><fa-icon [icon]="faCalendarCheck"></fa-icon>Agenda</a
+        >
+        <a href="/historico-paciente"
+          ><fa-icon [icon]="faClockRotateLeft"></fa-icon>Histórico</a
+        >
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="node mt-3">
+    <p>Geral</p>
+    <div [ngSwitch]="'paciente'" class="d-flex flex-column">
+      <ng-container *ngSwitchCase="'paciente'">
+        <a href="/perfil-paciente"><fa-icon [icon]="faUser"></fa-icon>Perfil</a>
+        <a href="/dependentes-paciente  "
+          ><fa-icon [icon]="faUserPlus"></fa-icon>Dependentes</a
+        >
+      </ng-container>
+      <ng-container *ngSwitchCase="'profissional'">
+        <a href="/perfil-profissional"
+          ><fa-icon [icon]="faUser"></fa-icon>Perfil</a
+        >
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="node">
+    <a href="/" style="text-decoration: none"
+      ><fa-icon [icon]="faRightFromBracket"></fa-icon>Sair</a
+    >
+  </div>
 </div>
