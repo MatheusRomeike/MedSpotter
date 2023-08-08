@@ -17,8 +17,9 @@ import { CommonModule } from '@angular/common';
 import { ToastNoAnimationModule } from 'ngx-toastr';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HeaderComponent } from './components/header/header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import { DefaultPageLayoutComponent } from './pages/default-page-layout/default-page-layout/default-page-layout.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
 
@@ -29,6 +30,7 @@ export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
     LoadingComponent,
     HeaderComponent,
     DefaultPageLayoutComponent,
+    SidebarComponent,
   ],
   exports: [
     AutoCompleteComponent,
