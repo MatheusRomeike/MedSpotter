@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatInputModule } from '@angular/material/input';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   IConfig,
@@ -20,6 +21,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/header/header.component';
 import { DefaultPageLayoutComponent } from './pages/default-page-layout/default-page-layout.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
 
@@ -54,6 +56,8 @@ export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
     ToastNoAnimationModule.forRoot(),
     RouterModule,
     NgbModule,
+    MatInputModule,
+    MatFormFieldModule,
   ],
 })
 export class SharedModule {}

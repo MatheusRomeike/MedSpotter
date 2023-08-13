@@ -1,17 +1,28 @@
-<div class="row" *ngIf="pageWidth >= 768">
-  <div class="col-lg-2 col-3 col-without-padding">
-    <app-sidebar></app-sidebar>
+<div *ngIf="currentUrl != '/login'">
+  <div class="row" *ngIf="pageWidth >= 768">
+    <div
+      class="col-lg-2 col-3 col-without-padding"
+      *ngIf="currentUrl != '/login'"
+    >
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-lg-10 col-9 col-without-padding">
+      <router-outlet></router-outlet>
+    </div>
   </div>
-  <div class="col-lg-10 col-9 col-without-padding">
-    <router-outlet></router-outlet>
+
+  <div class="column" *ngIf="pageWidth < 768">
+    <div class="col-12 col-without-padding">
+      <app-header></app-header>
+    </div>
+    <div class="col-12">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>
 
-<div class="column" *ngIf="pageWidth < 768">
+<div class="row" *ngIf="currentUrl == '/login'">
   <div class="col-12 col-without-padding">
-    <app-header></app-header>
-  </div>
-  <div class="col-12">
     <router-outlet></router-outlet>
   </div>
 </div>

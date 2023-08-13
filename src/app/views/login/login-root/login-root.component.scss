@@ -1,0 +1,20 @@
+.background-image {
+  background-image: url("../../../../assets/images/login_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.login-background {
+  background-color: rgba(86, 144, 146, 0.25);
+  height: 70%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .background-image {
+    display: none;
+  }
+}

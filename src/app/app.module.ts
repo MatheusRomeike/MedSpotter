@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthGuard } from './guards/auth.guard';
+import { LoginRootComponent } from './views/login/login-root/login-root.component';
 
 const authenticatorService = [Interceptor];
 
@@ -18,10 +19,6 @@ const authenticatorService = [Interceptor];
   ],
   bootstrap: [AppComponent],
   exports: [AppComponent],
-  imports: [
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    SharedModule,
-  ],
+  imports: [AppRoutingModule, BrowserAnimationsModule, SharedModule],
 })
 export class AppModule {}

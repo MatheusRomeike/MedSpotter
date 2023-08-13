@@ -21,10 +21,10 @@ paciente entra -> agendamento -> escolhe localidade -> escolhe especialidade -> 
 -cadastro ++
 switch pra selecionar tipo (paciente ou profissional)
 
--comp. sidebar ++
-inicio e sair
-paciente: agendar, historico, perfil e dependente
-profissional: agenda, historico, perfil
+~~-comp. sidebar ++~~
+~~inicio e sair~~
+~~paciente: agendar, historico, perfil e dependente~~
+~~profissional: agenda, historico, perfil~~
 
 -cadastro informacoes medico ++++
 crudzao informando especialidade, serviços prestados (multi-select)

@@ -42,4 +42,9 @@ $theme-colors: (
   "dark": #212529,
 );
 
+.col-without-padding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 @import "node_modules/bootstrap/scss/bootstrap";
