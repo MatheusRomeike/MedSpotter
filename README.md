@@ -41,7 +41,7 @@ estruturar informacoes uteis na tela inicial
 
 ## guilherme
 
--comp. agenda +++ https://www.rededorsaoluiz.com.br/paciente/marcar-exame/exame
+-comp. agenda +++
 selecionar data e horario, respeitando cadastro de horario do medico
 
 -comp. agendar atendimento/consulta +++++
