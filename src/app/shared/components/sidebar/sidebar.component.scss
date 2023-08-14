@@ -17,7 +17,7 @@
 }
 
 .node p {
-  font-size: 12px;
+  font-size: 13px;
   color: rgb(102, 102, 102);
   justify-self: center;
   margin: 0;
@@ -34,10 +34,14 @@ a {
   padding-right: 5px;
 }
 
+.ng-fa-icon:hover {
+  color: rgb(86, 144, 146);
+}
+
 .ng-fa-icon,
 a {
   color: rgb(102, 102, 102);
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .active > * {

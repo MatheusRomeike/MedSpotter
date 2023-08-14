@@ -47,4 +47,8 @@ $theme-colors: (
   margin: 0 !important;
 }
 
+.mdc-text-field__input {
+  height: 35px !important;
+}
+
 @import "node_modules/bootstrap/scss/bootstrap";
