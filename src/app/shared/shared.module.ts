@@ -41,6 +41,8 @@ export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
     RouterModule,
     NgbModule,
     DefaultPageLayoutComponent,
+    MatInputModule,
+    MatFormFieldModule,
   ],
   imports: [
     CommonModule,
