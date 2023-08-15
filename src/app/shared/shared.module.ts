@@ -22,11 +22,18 @@ import { HeaderComponent } from './components/header/header.component';
 import { DefaultPageLayoutComponent } from './pages/default-page-layout/default-page-layout.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {
+  ErrorStateMatcher,
+  ShowOnDirtyErrorStateMatcher,
+} from '@angular/material/core';
 
 export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
-  providers: [provideNgxMask()],
+  providers: [
+    provideNgxMask(),
+    { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher },
+  ],
   declarations: [
     AutoCompleteComponent,
     LoadingComponent,
@@ -43,6 +50,7 @@ export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
     DefaultPageLayoutComponent,
     MatInputModule,
     MatFormFieldModule,
+    ReactiveFormsModule,
   ],
   imports: [
     CommonModule,
@@ -60,6 +68,7 @@ export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
     NgbModule,
     MatInputModule,
     MatFormFieldModule,
+    ReactiveFormsModule,
   ],
 })
 export class SharedModule {}

@@ -1,0 +1,16 @@
+<form class="d-flex flex-column" [formGroup]="form" (ngSubmit)="login()">
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Ex. email@gmail.com" value="Email" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Senha</mat-label>
+    <input matInput placeholder="Ex. 12345678" type="password" value="Senha" />
+  </mat-form-field>
+  <button type="button" class="btn btn-primary-dark" (click)="login()">
+    ENTRAR
+  </button>
+  <p class="mt-2">
+    Não tem conta? <a (click)="redirectToRegister()">Registre-se</a>
+  </p>
+</form>

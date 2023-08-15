@@ -28,12 +28,12 @@ body {
 }
 
 $theme-colors: (
-  "primary": #7749f8,
-  "primary-dark": #5227cc,
-  "primary-light": #ebe5fc,
-  "secondary": #6c757d,
-  "secondary-dark": #54595e,
-  "secondary-light": #abb5be,
+  "primary": rgb(86, 144, 146),
+  "primary-dark": rgb(58, 96, 98),
+  "primary-light": rgb(115, 174, 176),
+  "secondary": rgb(146, 86, 88),
+  "secondary-dark": rgb(98, 58, 60),
+  "secondary-light": rgb(176, 115, 117),
   "success": #6a9429,
   "info": #0dcaf0,
   "warning": #ffc107,
@@ -41,6 +41,39 @@ $theme-colors: (
   "light": #f8f9fa,
   "dark": #212529,
 );
+
+$primary: map-get($theme-colors, "primary");
+$primary-dark: map-get($theme-colors, "primary-dark");
+$primary-light: map-get($theme-colors, "primary-light");
+$secondary: map-get($theme-colors, "secondary");
+$secondary-dark: map-get($theme-colors, "secondary-dark");
+$secondary-light: map-get($theme-colors, "secondary-light");
+$success: map-get($theme-colors, "success");
+$info: map-get($theme-colors, "info");
+$warning: map-get($theme-colors, "warning");
+$danger: map-get($theme-colors, "danger");
+$light: map-get($theme-colors, "light");
+$dark: map-get($theme-colors, "dark");
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000000s ease-in-out 0s !important;
+}
+
+.btn {
+  color: white !important;
+}
+
+.nav-link.active {
+  background-color: map-get($theme-colors, "primary") !important;
+  color: white !important;
+}
+
+.nav-link {
+  color: black !important;
+}
 
 .col-without-padding {
   padding: 0 !important;

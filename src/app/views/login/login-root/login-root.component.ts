@@ -9,6 +9,12 @@ import { Router } from '@angular/router';
 export class LoginRootComponent {
   constructor(private router: Router) {}
 
+  activeId = 'login';
+
+  redirectToRegister() {
+    this.activeId = 'register';
+  }
+
   login() {
     this.router.navigate(['/']);
   }

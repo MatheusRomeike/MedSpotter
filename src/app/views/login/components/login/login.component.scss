@@ -1,0 +1,13 @@
+p {
+  align-self: self-end;
+  font-size: 15px;
+}
+
+p > a {
+  color: blue;
+  cursor: pointer;
+}
+
+p > a:hover {
+  color: blue;
+}

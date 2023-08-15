@@ -6,12 +6,29 @@
 }
 
 .login-background {
-  background-color: rgba(86, 144, 146, 0.25);
   height: 70%;
-  width: 70%;
+  width: 50%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  border: 1px solid rgb(207, 207, 207);
+}
+
+.login-container {
+  margin-top: 10%;
+  width: 90%;
+}
+
+.nav {
+  justify-content: space-evenly !important;
+}
+
+.nav-tabs {
+  border: 0;
+}
+
+.nav-tabs .nav-link {
+  border-radius: 4px;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 767px) {
