@@ -7,7 +7,6 @@
 
 .login-background {
   height: 70%;
-  width: 50%;
   display: flex;
   justify-content: center;
   border: 1px solid rgb(207, 207, 207);
@@ -34,5 +33,11 @@
 @media screen and (max-width: 767px) {
   .background-image {
     display: none;
+  }
+}
+
+@media screen and (max-height: 767px) {
+  .login-background {
+    height: 85%;
   }
 }

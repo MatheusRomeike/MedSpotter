@@ -1,13 +1,23 @@
 <form class="d-flex flex-column" [formGroup]="form" (ngSubmit)="login()">
   <mat-form-field>
     <mat-label>Email</mat-label>
-    <input matInput placeholder="Ex. email@gmail.com" value="Email" />
+    <input
+      matInput
+      formControlName="email"
+      placeholder="Ex. email@gmail.com"
+      type="email"
+    />
   </mat-form-field>
   <mat-form-field>
     <mat-label>Senha</mat-label>
-    <input matInput placeholder="Ex. 12345678" type="password" value="Senha" />
+    <input
+      matInput
+      formControlName="senha"
+      placeholder="Ex. 12345678"
+      type="password"
+    />
   </mat-form-field>
-  <button type="button" class="btn btn-primary-dark" (click)="login()">
+  <button type="submit" class="btn btn-primary-dark" [disabled]="form.invalid">
     ENTRAR
   </button>
   <p class="mt-2">

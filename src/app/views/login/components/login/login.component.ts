@@ -13,8 +13,8 @@ export class LoginComponent implements OnInit {
   @Output() redirectToRegisterEvent: EventEmitter<boolean> = new EventEmitter();
 
   form = new FormGroup({
-    email: new FormControl('', Validators.required),
-    senha: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    senha: new FormControl('', [Validators.required, Validators.minLength(8)]),
   });
 
   ngOnInit(): void {}
