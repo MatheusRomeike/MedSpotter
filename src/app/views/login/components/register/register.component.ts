@@ -18,6 +18,8 @@ export class RegisterComponent implements OnInit {
     cpf: new FormControl('', Validators.required),
   });
 
+  tipoUsuario = 1;
+
   ngOnInit(): void {}
 
   register() {

@@ -79,4 +79,11 @@ input:-webkit-autofill:active {
   height: 35px !important;
 }
 
+.mdc-slider__track--inactive {
+  background-color: $primary-light !important;
+}
+.mat-mdc-slider .mdc-slider__track--active {
+  background-color: $primary-light !important;
+}
+
 @import "node_modules/bootstrap/scss/bootstrap";

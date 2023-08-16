@@ -26,6 +26,7 @@ import {
   ErrorStateMatcher,
   ShowOnDirtyErrorStateMatcher,
 } from '@angular/material/core';
+import { MatSliderModule } from '@angular/material/slider';
 
 export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
 
@@ -51,6 +52,7 @@ export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule,
+    MatSliderModule,
   ],
   imports: [
     CommonModule,
@@ -69,6 +71,7 @@ export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule,
+    MatSliderModule,
   ],
 })
 export class SharedModule {}
