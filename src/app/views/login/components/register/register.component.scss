@@ -1,0 +1,11 @@
+.erro {
+  color: red;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 200px) {
+  button {
+    font-size: 12px;
+    align-self: center;
+  }
+}

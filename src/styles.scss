@@ -82,8 +82,18 @@ input:-webkit-autofill:active {
 .mdc-slider__track--inactive {
   background-color: $primary-light !important;
 }
-.mat-mdc-slider .mdc-slider__track--active {
-  background-color: $primary-light !important;
+
+.mat-mdc-slider .mdc-slider__track--active_fill {
+  border-color: $primary !important;
+}
+
+.mat-mdc-slider .mdc-slider__thumb-knob {
+  border-color: $primary !important;
+}
+
+.icon-button {
+  border: 0 !important;
+  background-color: transparent !important;
 }
 
 @import "node_modules/bootstrap/scss/bootstrap";

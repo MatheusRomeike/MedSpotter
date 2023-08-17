@@ -1,13 +1,31 @@
-<form class="d-flex flex-column" [formGroup]="form" (ngSubmit)="login()">
+<form class="d-flex flex-column" [formGroup]="form">
   <mat-form-field>
     <mat-label>Email</mat-label>
     <input matInput formControlName="email" type="email" />
   </mat-form-field>
   <mat-form-field>
     <mat-label>Senha</mat-label>
-    <input matInput formControlName="senha" type="password" />
+    <input
+      matInput
+      formControlName="senha"
+      type="password"
+      [type]="senhaVisivel ? 'text' : 'password'"
+    />
+    <button
+      mat-icon-button
+      matSuffix
+      class="icon-button"
+      (click)="alternarVisibilidadeSenha()"
+    >
+      <mat-icon>{{ senhaVisivel ? "visibility" : "visibility_off" }}</mat-icon>
+    </button>
   </mat-form-field>
-  <button type="submit" class="btn btn-primary-dark" [disabled]="form.invalid">
+  <button
+    type="submit"
+    (click)="login()"
+    class="btn btn-primary-dark"
+    [disabled]="form.invalid"
+  >
     ENTRAR
   </button>
   <p class="mt-2">

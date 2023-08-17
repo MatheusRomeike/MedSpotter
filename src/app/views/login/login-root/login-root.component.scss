@@ -29,15 +29,23 @@
   border-radius: 4px;
   font-size: 12px;
 }
+@media screen and (max-width: 300px) {
+  .login-background {
+    height: 95% !important;
+  }
+}
 
 @media screen and (max-width: 767px) {
   .background-image {
     display: none;
   }
+  .login-background {
+    height: 90%;
+  }
 }
 
 @media screen and (max-height: 767px) {
   .login-background {
-    height: 85%;
+    height: 90%;
   }
 }

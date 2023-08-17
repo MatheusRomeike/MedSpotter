@@ -17,10 +17,16 @@ export class LoginComponent implements OnInit {
     senha: new FormControl('', [Validators.required, Validators.minLength(8)]),
   });
 
+  senhaVisivel: boolean = false;
+
   ngOnInit(): void {}
 
   login() {
     this.router.navigate(['/']);
+  }
+
+  alternarVisibilidadeSenha() {
+    this.senhaVisivel = !this.senhaVisivel;
   }
 
   redirectToRegister() {
