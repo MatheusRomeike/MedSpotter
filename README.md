@@ -17,9 +17,9 @@ paciente entra -> agendamento -> escolhe localidade -> escolhe especialidade -> 
 
 ## matheus
 
--login +
--cadastro ++
-switch pra selecionar tipo (paciente ou profissional)
+~~-login +~~
+~~-cadastro ++~~
+~~switch pra selecionar tipo (paciente ou profissional)~~
 
 ~~-comp. sidebar ++~~
 ~~inicio e sair~~
