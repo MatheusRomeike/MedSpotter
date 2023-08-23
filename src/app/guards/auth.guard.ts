@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
+import {
+  ActivatedRouteSnapshot,
+  Router,
+  RouterStateSnapshot,
+} from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthenticatorService } from '../shared/authenticator/authenticator.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class AuthGuard  {
+export class AuthGuard {
   constructor(
     private authenticatorService: AuthenticatorService,
     private router: Router,

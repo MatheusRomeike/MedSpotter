@@ -16,29 +16,29 @@ export class AuthenticatorService {
     localStorage.removeItem('token');
   }
 
-  public definirUsuario(usuario: string) {
-    localStorage.setItem('usuario', usuario);
+  public definirTipoUsuario(tipoUsuario: string) {
+    localStorage.setItem('tipoUsuario', tipoUsuario);
   }
 
-  public obterUsuario() {
-    return localStorage.getItem('usuario');
+  public obterTipoUsuario() {
+    return localStorage.getItem('tipoUsuario');
   }
 
-  private limparUsuario() {
-    localStorage.removeItem('usuario');
+  private limparTipoUsuario() {
+    localStorage.removeItem('tipoUsuario');
   }
 
   public limparDados() {
     this.limparToken();
-    this.limparUsuario();
+    this.limparTipoUsuario();
   }
 
   public autenticado() {
     if (
       this.obterToken() === null ||
       this.obterToken() === '' ||
-      this.obterUsuario() === null ||
-      this.obterUsuario() === ''
+      this.obterTipoUsuario() === null ||
+      this.obterTipoUsuario() === ''
     ) {
       return false;
     }

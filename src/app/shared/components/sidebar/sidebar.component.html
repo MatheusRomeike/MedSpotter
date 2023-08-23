@@ -6,7 +6,7 @@
   <div class="node mt-5">
     <p>Menu</p>
     <a href="/"><fa-icon [icon]="faHouse"></fa-icon>Início</a>
-    <div [ngSwitch]="'paciente'" class="d-flex flex-column">
+    <div [ngSwitch]="tipoUsuario" class="d-flex flex-column">
       <ng-container *ngSwitchCase="'paciente'">
         <a href="/agendar-paciente"
           ><fa-icon [icon]="faCalendarCheck"></fa-icon>Agendar</a
@@ -28,9 +28,9 @@
 
   <div class="node mt-3">
     <p>Geral</p>
-    <div [ngSwitch]="'paciente'" class="d-flex flex-column">
+    <div [ngSwitch]="tipoUsuario" class="d-flex flex-column">
       <ng-container *ngSwitchCase="'paciente'">
-        <a href="/perfil-paciente"><fa-icon [icon]="faUser"></fa-icon>Perfil</a>
+        <a href="/dados-paciente"><fa-icon [icon]="faUser"></fa-icon>Perfil</a>
         <a href="/dependentes-paciente  "
           ><fa-icon [icon]="faUserPlus"></fa-icon>Dependentes</a
         >

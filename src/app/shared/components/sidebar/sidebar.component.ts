@@ -1,5 +1,5 @@
+import { AuthenticatorService } from './../../authenticator/authenticator.service';
 import { AfterViewInit, Component, ElementRef, Renderer2 } from '@angular/core';
-import { Router } from '@angular/router';
 import {
   faCalendarCheck,
   faHouse,
@@ -23,17 +23,18 @@ export class SidebarComponent implements AfterViewInit {
   faRightFromBracket = faRightFromBracket;
 
   constructor(
-    private router: Router,
     private elementRef: ElementRef,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private authenticatorService: AuthenticatorService
   ) {}
+  tipoUsuario: string = this.authenticatorService.obterTipoUsuario() ?? '';
 
   ngAfterViewInit(): void {
     this.activeItem();
   }
 
   activeItem() {
-    const activeUrl = this.router.url;
+    const activeUrl = window.location.pathname;
     const links = this.elementRef.nativeElement.querySelectorAll('a');
 
     links.forEach((link: HTMLAnchorElement) => {

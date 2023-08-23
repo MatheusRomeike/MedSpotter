@@ -1,3 +1,4 @@
+import { AuthenticatorService } from './../../authenticator/authenticator.service';
 import { Component, OnInit } from '@angular/core';
 import {
   faCalendarCheck,
@@ -20,4 +21,8 @@ export class HeaderComponent {
   faUser = faUser;
   faUserPlus = faUserPlus;
   faRightFromBracket = faRightFromBracket;
+
+  constructor(private authenticatorService: AuthenticatorService) {}
+
+  tipoUsuario: string = this.authenticatorService.obterTipoUsuario() ?? '';
 }

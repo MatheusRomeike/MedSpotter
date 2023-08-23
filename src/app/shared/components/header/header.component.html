@@ -23,7 +23,7 @@
           ><fa-icon [icon]="faHouse"></fa-icon>Início</a
         >
       </li>
-      <div [ngSwitch]="'paciente'" class="d-flex flex-column">
+      <div [ngSwitch]="tipoUsuario" class="d-flex flex-column">
         <ng-container *ngSwitchCase="'paciente'">
           <li class="nav-item">
             <a class="nav-link" href="/agendar-paciente"
@@ -36,7 +36,7 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/perfil-paciente"
+            <a class="nav-link" href="/dados-paciente"
               ><fa-icon [icon]="faUser"></fa-icon>Perfil</a
             >
           </li>
