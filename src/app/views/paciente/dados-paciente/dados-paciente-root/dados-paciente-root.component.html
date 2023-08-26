@@ -1,1 +1,19 @@
-<p>dados-paciente-root works!</p>
+<div class="caixa">
+  <div
+    class="col-xl-5 col-lg-7 col-md-8 col-sm-9 col-11 mt-5 d-flex flex-column"
+  >
+    <div class="d-flex justify-content-between">
+      <label>Dados Pessoais</label>
+      <label>Endereço</label>
+      <label>Dependentes</label>
+    </div>
+    <mat-slider max="3" min="1">
+      <input matSliderThumb #slider />
+    </mat-slider>
+    <div [ngSwitch]="slider.value" class="mt-3">
+      <ng-container *ngSwitchCase="1"> Dados Pessoais </ng-container>
+      <ng-container *ngSwitchCase="2"> Endereço </ng-container>
+      <ng-container *ngSwitchCase="3"> Dependentes </ng-container>
+    </div>
+  </div>
+</div>
