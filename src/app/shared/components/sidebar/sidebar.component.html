@@ -31,9 +31,6 @@
     <div [ngSwitch]="tipoUsuario" class="d-flex flex-column">
       <ng-container *ngSwitchCase="'paciente'">
         <a href="/dados-paciente"><fa-icon [icon]="faUser"></fa-icon>Perfil</a>
-        <a href="/dependentes-paciente  "
-          ><fa-icon [icon]="faUserPlus"></fa-icon>Dependentes</a
-        >
       </ng-container>
       <ng-container *ngSwitchCase="'profissional'">
         <a href="/perfil-profissional"

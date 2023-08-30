@@ -1,3 +1,4 @@
+import { HistoricoAgendamentosModule } from './views/paciente/historico-agendamentos/historico-agendamentos.module';
 import { DadosPacienteModule } from './views/paciente/dados-paciente/dados-paciente.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -24,6 +25,13 @@ const routes: Routes = [
       import('./views/paciente/dados-paciente/dados-paciente.module').then(
         (m) => m.DadosPacienteModule
       ),
+  },
+  {
+    path: 'historico-paciente',
+    loadChildren: () =>
+      import(
+        './views/paciente/historico-agendamentos/historico-agendamentos.module'
+      ).then((m) => m.HistoricoAgendamentosModule),
   },
 ];
 

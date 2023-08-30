@@ -1,4 +1,3 @@
-<!-- Lista de Cards -->
 <div class="row listagem">
   <div class="col-lg-12 col-xl-6 mb-4">
     <div class="card card-endereco">
@@ -139,7 +138,83 @@
   </div>
 </div>
 
-<!-- Botão "Adicionar" -->
 <div class="mt-4 float-end">
-  <button class="btn btn-primary-light">Adicionar Novo Endereço</button>
+  <button class="btn btn-primary-light" (click)="abrirModal()">
+    Adicionar Novo Endereço
+  </button>
 </div>
+
+<ng-template #modal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">
+      {{ tituloModal }} Endereço
+    </h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="cancelar()"
+    ></button>
+  </div>
+  <div class="modal-body my-3">
+    <form [formGroup]="form">
+      <div class="row">
+        <mat-form-field class="col-7">
+          <mat-label>Logradouro</mat-label>
+          <input matInput formControlName="logradouro" />
+        </mat-form-field>
+        <mat-form-field class="col-5">
+          <mat-label>Numero</mat-label>
+          <input matInput formControlName="numero" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field class="col-7">
+          <mat-label>Bairro</mat-label>
+          <input matInput formControlName="bairro" />
+        </mat-form-field>
+        <mat-form-field class="col-5">
+          <mat-label>Cidade</mat-label>
+          <input matInput formControlName="cidade" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field class="col-7">
+          <mat-label>Estado</mat-label>
+          <input matInput formControlName="estado" />
+        </mat-form-field>
+        <mat-form-field class="col-5">
+          <mat-label>CEP</mat-label>
+          <input matInput formControlName="cep" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field class="col-7">
+          <mat-label>Complemento</mat-label>
+          <input matInput formControlName="complemento" />
+        </mat-form-field>
+        <mat-form-field class="col-5">
+          <mat-label>Tipo Endereço</mat-label>
+          <select matNativeControl formControlName="tipoEndereco">
+            <option value="1">Principal</option>
+            <option value="2">Alternativo</option>
+            <option value="3">Comercial</option>
+            <option value="4">Antigo</option>
+          </select>
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-thirty" (click)="cancelar()">
+      Cancelar
+    </button>
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="modal.close('Save click')"
+    >
+      Salvar
+    </button>
+  </div>
+</ng-template>

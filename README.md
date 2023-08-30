@@ -30,8 +30,8 @@ paciente entra -> agendamento -> escolhe localidade -> escolhe especialidade -> 
 crudzao informando especialidade, serviços prestados (multi-select)
 locais de atendimento
 
--cadastro informacoes paciente ++
-crudzao paciente
+~~-cadastro informacoes paciente ++~~
+~~crudzao paciente~~
 
 -historico agendamentos paciente ++
 listagem
