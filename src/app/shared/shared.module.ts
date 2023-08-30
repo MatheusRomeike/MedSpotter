@@ -56,6 +56,7 @@ export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
     MatSliderModule,
     CommonModule,
     MatIconModule,
+    FormsModule,
   ],
   imports: [
     CommonModule,

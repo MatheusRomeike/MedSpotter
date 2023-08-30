@@ -34,10 +34,11 @@ $theme-colors: (
   "secondary": rgb(146, 86, 88),
   "secondary-dark": rgb(98, 58, 60),
   "secondary-light": rgb(176, 115, 117),
+  "thirty": #6c757d,
   "success": #6a9429,
   "info": #0dcaf0,
   "warning": #ffc107,
-  "danger": #ff0000,
+  "danger": #dc3545,
   "light": #f8f9fa,
   "dark": #212529,
 );
@@ -48,6 +49,7 @@ $primary-light: map-get($theme-colors, "primary-light");
 $secondary: map-get($theme-colors, "secondary");
 $secondary-dark: map-get($theme-colors, "secondary-dark");
 $secondary-light: map-get($theme-colors, "secondary-light");
+$thirty: map-get($theme-colors, "thirty");
 $success: map-get($theme-colors, "success");
 $info: map-get($theme-colors, "info");
 $warning: map-get($theme-colors, "warning");

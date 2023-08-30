@@ -1,0 +1,49 @@
+<form class="d-flex flex-column" [formGroup]="form">
+  <mat-form-field>
+    <mat-label>Nome Completo</mat-label>
+    <input matInput formControlName="nome" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>CPF</mat-label>
+    <input matInput formControlName="cpf" />
+  </mat-form-field>
+  <div class="row">
+    <mat-form-field class="col-12 col-sm-6">
+      <mat-label>Sexo</mat-label>
+      <select matNativeControl formControlName="sexo">
+        <option value="1">Masculino</option>
+        <option value="2">Feminino</option>
+      </select>
+    </mat-form-field>
+    <mat-form-field class="col-12 col-sm-6">
+      <mat-label>Data de nascimento</mat-label>
+      <input matInput formControlName="dataNascimento" type="text" />
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field class="col-12 col-sm-6">
+      <mat-label>Telefone</mat-label>
+      <input matInput formControlName="telefone" type="tel" />
+    </mat-form-field>
+    <mat-form-field class="col-12 col-sm-6">
+      <mat-label>Estado Civil</mat-label>
+      <select matNativeControl formControlName="estadoCivil">
+        <option value="1">Solteiro(a)</option>
+        <option value="2">Casado(a)</option>
+        <option value="3">Separado(a)</option>
+        <option value="4">Divorciado(a)</option>
+        <option value="5">Viúvo(a)</option>
+      </select>
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field class="col-12 col-sm-6">
+      <mat-label>Profissao</mat-label>
+      <input matInput formControlName="profissao" type="text" />
+    </mat-form-field>
+    <mat-form-field class="col-12 col-sm-6">
+      <mat-label>Nacionalidade</mat-label>
+      <input matInput formControlName="nacionalidade" type="text" />
+    </mat-form-field>
+  </div>
+</form>

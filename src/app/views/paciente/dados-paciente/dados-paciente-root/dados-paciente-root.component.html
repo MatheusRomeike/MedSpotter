@@ -4,16 +4,22 @@
   >
     <div class="d-flex justify-content-between">
       <label>Dados Pessoais</label>
-      <label>Endereço</label>
+      <label>Endereços</label>
       <label>Dependentes</label>
     </div>
     <mat-slider max="3" min="1">
-      <input matSliderThumb #slider />
+      <input matSliderThumb [(ngModel)]="sliderValue" />
     </mat-slider>
-    <div [ngSwitch]="slider.value" class="mt-3">
-      <ng-container *ngSwitchCase="1"> Dados Pessoais </ng-container>
-      <ng-container *ngSwitchCase="2"> Endereço </ng-container>
-      <ng-container *ngSwitchCase="3"> Dependentes </ng-container>
+    <div [ngSwitch]="sliderValue" class="mt-3">
+      <ng-container *ngSwitchCase="1">
+        <app-dados-pessoais [form]="formDadosPessoais"></app-dados-pessoais>
+      </ng-container>
+      <ng-container *ngSwitchCase="2">
+        <app-endereco></app-endereco>
+      </ng-container>
+      <ng-container *ngSwitchCase="3">
+        <app-dependentes></app-dependentes>
+      </ng-container>
     </div>
   </div>
 </div>

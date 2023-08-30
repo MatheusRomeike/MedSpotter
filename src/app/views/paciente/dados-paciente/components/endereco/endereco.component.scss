@@ -1,0 +1,28 @@
+.card-endereco {
+  height: 11.5rem;
+}
+
+p {
+  font-size: 14px;
+}
+
+.listagem {
+  height: 34rem !important;
+  overflow-y: auto !important;
+}
+
+.card-desativado {
+  opacity: 0.7;
+}
+
+.botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .card-endereco {
+    height: 10rem;
+  }
+}
