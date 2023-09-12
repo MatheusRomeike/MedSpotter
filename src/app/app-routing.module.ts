@@ -1,4 +1,3 @@
-import { HistoricoAgendamentosModule } from './views/paciente/historico-agendamentos/historico-agendamentos.module';
 import { DadosPacienteModule } from './views/paciente/dados-paciente/dados-paciente.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -30,8 +29,15 @@ const routes: Routes = [
     path: 'historico-paciente',
     loadChildren: () =>
       import(
-        './views/paciente/historico-agendamentos/historico-agendamentos.module'
-      ).then((m) => m.HistoricoAgendamentosModule),
+        './views/paciente/historico-agendamentos-paciente/historico-agendamentos-paciente.module'
+      ).then((m) => m.HistoricoAgendamentosPacienteModule),
+  },
+  {
+    path: 'historico-medico',
+    loadChildren: () =>
+      import(
+        './views/doctor/historico-agendamentos-doctor/historico-agendamentos-doctor.module'
+      ).then((m) => m.HistoricoAgendamentosDoctorModule),
   },
 ];
 

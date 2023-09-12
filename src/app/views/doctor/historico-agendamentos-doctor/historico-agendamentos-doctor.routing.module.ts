@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from 'src/app/guards/auth.guard';
-import { HistoricoAgendamentosRootComponent } from './historico-agendamentos-root/historico-agendamentos-root.component';
+import { HistoricoAgendamentosDoctorRootComponent } from './historico-agendamentos-doctor-root/historico-agendamentos-doctor-root.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HistoricoAgendamentosRootComponent,
+    component: HistoricoAgendamentosDoctorRootComponent,
     canActivate: [AuthGuard],
   },
 ];
@@ -15,4 +15,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class HistoricoAgendamentosRoutingModule {}
+export class HistoricoAgendamentosDoctorRoutingModule {}

@@ -1,0 +1,18 @@
+@media screen and (max-width: 767px) {
+  .caixa {
+    display: flex;
+    justify-content: center;
+  }
+  .card-avaliacao {
+    height: 7rem;
+  }
+}
+
+.card-avaliacao {
+  height: 8rem;
+}
+
+.listagem {
+  max-height: 48rem !important;
+  overflow-y: auto !important;
+}

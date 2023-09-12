@@ -15,11 +15,11 @@
           ><fa-icon [icon]="faClockRotateLeft"></fa-icon>Histórico</a
         >
       </ng-container>
-      <ng-container *ngSwitchCase="'profissional'">
-        <a href="/agenda-profissional"
+      <ng-container *ngSwitchCase="'medico'">
+        <a href="/agenda-medico"
           ><fa-icon [icon]="faCalendarCheck"></fa-icon>Agenda</a
         >
-        <a href="/historico-paciente"
+        <a href="/historico-medico"
           ><fa-icon [icon]="faClockRotateLeft"></fa-icon>Histórico</a
         >
       </ng-container>
@@ -32,10 +32,8 @@
       <ng-container *ngSwitchCase="'paciente'">
         <a href="/dados-paciente"><fa-icon [icon]="faUser"></fa-icon>Perfil</a>
       </ng-container>
-      <ng-container *ngSwitchCase="'profissional'">
-        <a href="/perfil-profissional"
-          ><fa-icon [icon]="faUser"></fa-icon>Perfil</a
-        >
+      <ng-container *ngSwitchCase="'medico'">
+        <a href="/perfil-medico"><fa-icon [icon]="faUser"></fa-icon>Perfil</a>
       </ng-container>
     </div>
   </div>

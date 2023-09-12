@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   login() {
-    this.authenticatorService.definirTipoUsuario('paciente');
+    this.authenticatorService.definirTipoUsuario('medico');
 
     this.authenticatorService.definirToken(
       'eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTcwMzM3MDQ2OSwiaWF0IjoxNjkyODI5NjY5fQ.eTtSoeUUNkyORAJ-_vnutgQJx-ifRvcUjhHPHTY3N7Q'

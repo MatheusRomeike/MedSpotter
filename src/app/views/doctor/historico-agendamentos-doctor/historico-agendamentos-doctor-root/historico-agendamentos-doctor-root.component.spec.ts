@@ -2,21 +2,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
+import { HistoricoAgendamentosDoctorRootComponent } from './historico-agendamentos-doctor-root.component';
 
-import { HistoricoAgendamentosRootComponent } from './historico-agendamentos-root.component';
-
-describe('HistoricoAgendamentosRootComponent', () => {
-  let component: HistoricoAgendamentosRootComponent;
-  let fixture: ComponentFixture<HistoricoAgendamentosRootComponent>;
+describe('HistoricoAgendamentosDoctorRootComponent', () => {
+  let component: HistoricoAgendamentosDoctorRootComponent;
+  let fixture: ComponentFixture<HistoricoAgendamentosDoctorRootComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HistoricoAgendamentosRootComponent],
+      declarations: [HistoricoAgendamentosDoctorRootComponent],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HistoricoAgendamentosRootComponent);
+    fixture = TestBed.createComponent(HistoricoAgendamentosDoctorRootComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
