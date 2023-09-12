@@ -28,6 +28,7 @@ import {
 } from '@angular/material/core';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatIconModule } from '@angular/material/icon';
+import { StarRatingComponent } from './components/star-rating/star-rating.component';
 
 export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
 
@@ -42,6 +43,7 @@ export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
     HeaderComponent,
     DefaultPageLayoutComponent,
     SidebarComponent,
+    StarRatingComponent,
   ],
   exports: [
     AutoCompleteComponent,
@@ -57,6 +59,7 @@ export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
     CommonModule,
     MatIconModule,
     FormsModule,
+    StarRatingComponent,
   ],
   imports: [
     CommonModule,

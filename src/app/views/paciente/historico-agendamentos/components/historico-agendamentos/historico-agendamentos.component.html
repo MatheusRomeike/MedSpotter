@@ -1,0 +1,54 @@
+<div class="row listagem mt-3">
+  <div class="col-lg-12 col-xl-6 mb-4">
+    <div class="card card-endereco">
+      <div class="card-body d-flex flex-column justify-content-between">
+        <div>
+          <h5 class="card-title">
+            Carlos Roberto <app-star-rating></app-star-rating>
+          </h5>
+          <p class="card-text">Cardiologista - 11/09/2023 15:30</p>
+        </div>
+        <div class="col-12 botoes">
+          <button class="btn btn-sm btn-danger" disabled>Deletar</button>
+          <button class="btn btn-sm btn-primary">Avaliar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12 col-xl-6 mb-4">
+    <div class="card card-endereco">
+      <div class="card-body d-flex flex-column justify-content-between">
+        <div>
+          <h5 class="card-title">
+            Carlos Roberto <app-star-rating></app-star-rating>
+          </h5>
+          <p class="card-text">Cardiologista - 11/09/2023 13:30</p>
+        </div>
+        <div class="col-12 botoes">
+          <button class="btn btn-sm btn-danger" disabled>Deletar</button>
+          <button class="btn btn-sm btn-primary">Avaliar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12 col-xl-6 mb-4">
+    <div class="card card-endereco">
+      <div class="card-body d-flex flex-column justify-content-between">
+        <div>
+          <h5 class="card-title">
+            Carlos Roberto
+            <app-star-rating
+              [starRating]="4"
+              [disabled]="true"
+            ></app-star-rating>
+          </h5>
+          <p class="card-text">Cardiologista - 11/09/2023 11:30</p>
+        </div>
+        <div class="col-12 botoes">
+          <button class="btn btn-sm btn-danger">Deletar</button>
+          <button class="btn btn-sm btn-primary" disabled>Avaliar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

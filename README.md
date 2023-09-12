@@ -33,11 +33,14 @@ locais de atendimento
 ~~-cadastro informacoes paciente ++~~
 ~~crudzao paciente~~
 
--historico agendamentos paciente ++
-listagem
+~~-historico agendamentos paciente ++~~
+~~listagem~~
 
--inicio +
-estruturar informacoes uteis na tela inicial
+~~-avaliar agendamento paciente +~~
+~~opçao de avaliar e apagar avaliacao~~
+
+~~-cad. dependente +~~
+~~novo, editar ou apagar. com nome, cpf e data de nascimento.~~
 
 ## guilherme
 
@@ -47,14 +50,11 @@ selecionar data e horario, respeitando cadastro de horario do medico
 -comp. agendar atendimento/consulta +++++
 fluxo principal
 
--avaliar agendamento paciente +
-opçao de avaliar e apagar avaliacao
+-inicio +
+estruturar informacoes uteis na tela inicial
 
 -perfil medico +++
 foto, nome, especialidades, avaliações, listagem de endereços
-
--cad. dependente +
-novo, editar ou apagar. com nome, cpf e data de nascimento.
 
 -inicio +
 chamada do componente de pesquisa e informações uteis
