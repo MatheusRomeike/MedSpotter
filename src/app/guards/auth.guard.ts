@@ -26,6 +26,19 @@ export class AuthGuard {
       return true;
     }
 
+    var tipoUsuarioTela = route.data['tipoUsuario'] as string;
+    if (tipoUsuarioTela != undefined) {
+      var tipoUsuarioLogado = this.authenticatorService.obterTipoUsuario();
+
+      if (tipoUsuarioTela != tipoUsuarioLogado) {
+        this.toastr.error(
+          `Você como ${tipoUsuarioLogado} não tem permissão para acessar essa página!`
+        );
+        this.router.navigate(['/']);
+        return false;
+      }
+    }
+
     if (this.authenticatorService.autenticado()) {
       return true;
     }

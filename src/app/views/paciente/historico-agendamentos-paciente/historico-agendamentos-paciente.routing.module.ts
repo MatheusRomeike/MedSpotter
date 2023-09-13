@@ -8,6 +8,7 @@ const routes: Routes = [
     path: '',
     component: HistoricoAgendamentosPacienteRootComponent,
     canActivate: [AuthGuard],
+    data: { tipoUsuario: 'paciente' },
   },
 ];
 

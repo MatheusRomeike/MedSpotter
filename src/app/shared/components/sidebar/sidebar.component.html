@@ -30,7 +30,7 @@
     <p>Geral</p>
     <div [ngSwitch]="tipoUsuario" class="d-flex flex-column">
       <ng-container *ngSwitchCase="'paciente'">
-        <a href="/dados-paciente"><fa-icon [icon]="faUser"></fa-icon>Perfil</a>
+        <a href="/perfil-paciente"><fa-icon [icon]="faUser"></fa-icon>Perfil</a>
       </ng-container>
       <ng-container *ngSwitchCase="'medico'">
         <a href="/perfil-medico"><fa-icon [icon]="faUser"></fa-icon>Perfil</a>

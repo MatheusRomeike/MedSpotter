@@ -5,7 +5,12 @@ import { AuthGuard } from 'src/app/guards/auth.guard';
 import { DadosDoctorRootComponent } from './dados-doctor-root/dados-doctor-root.component';
 
 const routes: Routes = [
-  { path: '', component: DadosDoctorRootComponent, canActivate: [AuthGuard] },
+  {
+    path: '',
+    component: DadosDoctorRootComponent,
+    canActivate: [AuthGuard],
+    data: { tipoUsuario: 'medico' },
+  },
 ];
 
 @NgModule({

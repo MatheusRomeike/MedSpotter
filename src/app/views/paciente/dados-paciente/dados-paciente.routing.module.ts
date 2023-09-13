@@ -5,7 +5,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from 'src/app/guards/auth.guard';
 
 const routes: Routes = [
-  { path: '', component: DadosPacienteRootComponent, canActivate: [AuthGuard] },
+  {
+    path: '',
+    component: DadosPacienteRootComponent,
+    canActivate: [AuthGuard],
+    data: { tipoUsuario: 'paciente' },
+  },
 ];
 
 @NgModule({

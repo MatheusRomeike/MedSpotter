@@ -20,7 +20,7 @@ const routes: Routes = [
       import('./views/doctor/doctor.module').then((m) => m.DoctorModule),
   },
   {
-    path: 'dados-paciente',
+    path: 'perfil-paciente',
     loadChildren: () =>
       import('./views/paciente/dados-paciente/dados-paciente.module').then(
         (m) => m.DadosPacienteModule
