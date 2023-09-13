@@ -1,3 +1,4 @@
+import { DadosDoctorModule } from './views/doctor/dados-doctor/dados-doctor.module';
 import { DadosPacienteModule } from './views/paciente/dados-paciente/dados-paciente.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -38,6 +39,13 @@ const routes: Routes = [
       import(
         './views/doctor/historico-agendamentos-doctor/historico-agendamentos-doctor.module'
       ).then((m) => m.HistoricoAgendamentosDoctorModule),
+  },
+  {
+    path: 'perfil-medico',
+    loadChildren: () =>
+      import('./views/doctor/dados-doctor/dados-doctor.module').then(
+        (m) => m.DadosDoctorModule
+      ),
   },
 ];
 

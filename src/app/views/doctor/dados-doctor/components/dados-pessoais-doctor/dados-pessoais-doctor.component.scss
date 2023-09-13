@@ -1,0 +1,8 @@
+::ng-deep .selected-item > span {
+  font-size: 12px !important;
+}
+
+::ng-deep .selected-item {
+  background-color: rgb(58, 96, 98) !important;
+  border-color: rgb(115, 174, 176) !important;
+}

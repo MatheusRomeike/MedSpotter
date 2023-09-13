@@ -15,5 +15,6 @@ import { DependentesComponent } from './components/dependentes/dependentes.compo
     EnderecoComponent,
     DependentesComponent,
   ],
+  exports: [EnderecoComponent],
 })
 export class DadosPacienteModule {}

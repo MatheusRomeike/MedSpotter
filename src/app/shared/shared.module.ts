@@ -29,6 +29,8 @@ import {
 import { MatSliderModule } from '@angular/material/slider';
 import { MatIconModule } from '@angular/material/icon';
 import { StarRatingComponent } from './components/star-rating/star-rating.component';
+import { MatSelectModule } from '@angular/material/select';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
 
@@ -60,6 +62,8 @@ export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
     MatIconModule,
     FormsModule,
     StarRatingComponent,
+    MatSelectModule,
+    NgMultiSelectDropDownModule,
   ],
   imports: [
     CommonModule,
@@ -80,6 +84,8 @@ export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
     ReactiveFormsModule,
     MatSliderModule,
     MatIconModule,
+    MatSelectModule,
+    NgMultiSelectDropDownModule.forRoot(),
   ],
 })
 export class SharedModule {}

@@ -26,9 +26,9 @@ paciente entra -> agendamento -> escolhe localidade -> escolhe especialidade -> 
 ~~paciente: agendar, historico, perfil e dependente~~
 ~~profissional: agenda, historico, perfil~~
 
--cadastro informacoes medico ++++
-crudzao informando especialidade, serviços prestados (multi-select)
-locais de atendimento
+~~-cadastro informacoes medico ++++~~
+~~crudzao informando especialidade, serviços prestados (multi-select)~~
+~~locais de atendimento~~
 
 ~~-cadastro informacoes paciente ++~~
 ~~crudzao paciente~~
