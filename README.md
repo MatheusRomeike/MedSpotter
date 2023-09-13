@@ -44,10 +44,10 @@ paciente entra -> agendamento -> escolhe localidade -> escolhe especialidade -> 
 
 ## guilherme
 
--comp. agenda +++
+-tela agenda +++
 selecionar data e horario, respeitando cadastro de horario do medico
 
--comp. agendar atendimento/consulta +++++
+-tela agendar atendimento/consulta +++++
 fluxo principal
 
 -inicio +
