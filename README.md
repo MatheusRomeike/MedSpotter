@@ -53,8 +53,8 @@ fluxo principal
 -inicio +
 estruturar informacoes uteis na tela inicial
 
--perfil medico +++
-foto, nome, especialidades, avaliações, listagem de endereços
+~~-perfil medico +++~~
+~~foto, nome, especialidades, avaliações, listagem de endereços~~
 
 -inicio +
 chamada do componente de pesquisa e informações uteis

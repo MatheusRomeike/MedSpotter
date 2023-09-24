@@ -1,0 +1,60 @@
+<div class="card mr-5 pl-5" class="pt-5 pb-1 pb-sm-5">
+  <div class="card-body shadow bg-white rounded mr-5 pl-5">
+    <div data-id="intro-bkg">
+      <div
+        class="intro-bkg intro-bkg-offline-consultation active"
+        data-intro-bkg="office-visit"
+      ></div>
+      <div
+        class="intro-bkg intro-bkg-online-consultation"
+        data-intro-bkg="online-consultation"
+      ></div>
+    </div>
+    <div class="container text-center text-sm-left">
+      <div class="row">
+        <h1
+          class="col-lg-12 mt-0 mt-sm-12 intro-header"
+          style="color: rgb(86, 144, 146)"
+        >
+          Agendar Consulta
+        </h1>
+
+        <div class="col-lg-9">
+          <div id="homepage-search" data-id="contextual-search-nav">
+            <div class="tab-content">
+              <form class="d-flex flex-column mb-3" [formGroup]="form">
+                <div class="row">
+                  <mat-form-field class="col-3">
+                    <mat-label>Localidade</mat-label>
+                    <input matInput formControlName="localidade" />
+                  </mat-form-field>
+                  <mat-form-field class="col-3">
+                    <mat-label>Especialidade</mat-label>
+                    <input matInput formControlName="especialidade" />
+                  </mat-form-field>
+                  <mat-form-field class="col-3">
+                    <mat-label>Convênio</mat-label>
+                    <input matInput formControlName="convenio" />
+                  </mat-form-field>
+
+                  <button
+                    type="button"
+                    class="btn btn-success mt-3 col-3"
+                    data-mdb-ripple-color="dark"
+                    style="
+                      z-index: 1;
+                      background-color: rgb(86, 144, 146);
+                      border-color: rgb(86, 144, 146);
+                    "
+                  >
+                    <span style="color: white">Agendar</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,65 +2,113 @@
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-lg-9 col-xl-7">
-        <div class="card">
-          <div class="rounded-top text-white d-flex flex-row" style="background-color: #f8f9fa; height:200px;">
-            <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
-              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
-                alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
-                style="width: 150px; z-index: 1">
-              <button type="button" class="btn btn-success" data-mdb-ripple-color="dark"
-                style="z-index: 1;">
-                <span style="color:#f8f9fa;">CONSULTAR</span>
+        <div class="card shadow bg-white rounded">
+          <div
+            class="rounded-top text-white d-flex flex-row"
+            style="background-color: rgb(86, 144, 146); height: 200px"
+          >
+            <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV80d6yVXud_czITEsKfN0azmxWK8rVXUBNA&usqp=CAU"
+                alt="Generic placeholder image"
+                class="img-fluid img-thumbnail mt-4 mb-2"
+                style="width: 150px; z-index: 1"
+              />
+              <button
+                type="button"
+                class="btn btn-success mt-3"
+                data-mdb-ripple-color="dark"
+                style="
+                  z-index: 1;
+                  background-color: rgb(86, 144, 146);
+                  border-color: rgb(86, 144, 146);
+                "
+              >
+                <span style="color: white">Agendar</span>
               </button>
             </div>
-            <div class="ms-3" style="margin-top: 130px;">
-              <h5 style="color:black">Dr. Raphael Frade Said</h5>
-              <p style="color:black">Ginecologista</p>
+            <div class="ms-3" style="margin-top: 130px">
+              <h5 class="font-weight-bold" style="color: black">
+                {{ doctor.name }}, {{ doctor.ratingAvg }}
+                <mat-icon style="color: #ffcd3c">{{ "star" }}</mat-icon>
+              </h5>
+              <p style="color: rgb(230, 230, 230)">{{ getSpecialty() }}</p>
             </div>
           </div>
-          <div class="p-4 text-black" style="background-color: #f8f9fa;">
+          <div class="p-4 text-black" style="background-color: #f8f9fa">
             <div class="d-flex justify-content-end text-center py-1">
-             
               <div>
-                <p class="mb-1 h5">478</p>
-                <p class="small text-muted mb-0">Avaliações</p>
+                <p class="mb-1 h5">
+                  {{ doctor.ratingCount }}
+                  <mat-icon style="color: #ffcd3c">{{ "star" }}</mat-icon>
+                </p>
+                <p
+                  class="small text-muted mb-0"
+                  style="color: rgb(102, 102, 102)"
+                >
+                  <a href="#!" class="text-muted">Avaliações</a>
+                </p>
               </div>
-              <div>
-                
-              </div>
+              <div></div>
             </div>
           </div>
           <div class="card-body p-4 text-black">
             <div class="mb-5">
-              <p class="lead fw-normal mb-1">About</p>
-              <div class="p-4" style="background-color: #f8f9fa;">
-                <p class="font-italic mb-1">Web Developer</p>
-                <p class="font-italic mb-1">Lives in New York</p>
-                <p class="font-italic mb-0">Photographer</p>
+              <p
+                class="lead fw-normal mb-1"
+                style="color: black; background-color: #f8f9fac9"
+              >
+                Experiência
+              </p>
+              <div class="p-4" style="background-color: #f8f9fa">
+                <p
+                  class="mb-1 font-weight-bold"
+                  style="color: black"
+                  *ngFor="let data of doctor.specialties"
+                >
+                  {{ data.description }}
+                </p>
               </div>
             </div>
             <div class="d-flex justify-content-between align-items-center mb-4">
-              <p class="lead fw-normal mb-0">Recent photos</p>
+              <p
+                class="lead fw-normal mb-0"
+                style="background-color: #f8f9fac9"
+              >
+                Consultórios
+              </p>
               <p class="mb-0"><a href="#!" class="text-muted">Show all</a></p>
             </div>
             <div class="row g-2">
               <div class="col mb-2">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp"
-                  alt="image 1" class="w-100 rounded-3">
+                <img
+                  src="https://www.hospitalipo.com/assets/img/uploads/unidades-ipo/roberto-barrozo.jpg"
+                  alt="image 1"
+                  class="w-100 rounded-3"
+                />
               </div>
               <div class="col mb-2">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(107).webp"
-                  alt="image 1" class="w-100 rounded-3">
+                <img
+                  src="https://lh5.googleusercontent.com/p/AF1QipMZ0Ux4_W51r8bcNYIdWc06cfG4FtOK95VjDDEu=w408-h255-k-no"
+                  alt="image 1"
+                  class="w-100 rounded-3"
+                />
               </div>
             </div>
             <div class="row g-2">
               <div class="col">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(108).webp"
-                  alt="image 1" class="w-100 rounded-3">
+                <img
+                  src="https://lh3.googleusercontent.com/p/AF1QipOqkvBe6kQAHF_DXaYX83JUXF1grdsxiQaB1ZT0=s1360-w1360-h1020"
+                  alt="image 1"
+                  class="w-100 rounded-3"
+                />
               </div>
               <div class="col">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(114).webp"
-                  alt="image 1" class="w-100 rounded-3">
+                <img
+                  src="https://www.hospitalipo.com/assets/img/uploads/unidades-ipo/fazendinha.jpg"
+                  alt="image 1"
+                  class="w-100 rounded-3"
+                />
               </div>
             </div>
           </div>
@@ -68,3 +116,4 @@
       </div>
     </div>
   </div>
+</section>
