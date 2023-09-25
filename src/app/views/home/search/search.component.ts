@@ -1,11 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss'],
 })
-export class SearchComponent {
+export class SearchComponent implements OnInit {
   response: any;
   doctor = {
     name: 'Doutor Ricardo Lasmar',
@@ -24,7 +25,34 @@ export class SearchComponent {
     ratingAvg: 4.8,
     ratingCount: 125,
   };
-  @Input('form') form: any;
+
+  dropdownList = [
+    { id: 1, text: 'Cardiologia' },
+    { id: 2, text: 'Pneumologia' },
+    { id: 3, text: 'Radiografia' },
+    { id: 4, text: 'Odontologia' },
+    { id: 5, text: 'Ecografia' },
+  ];
+  dropdownSettings = {
+    singleSelection: false,
+    idField: 'id',
+    textField: 'text',
+    selectAllText: 'Selecionar Tudo',
+    unSelectAllText: 'Desmarcar Tudo',
+    itemsShowLimit: 4,
+    allowSearchFilter: true,
+  };
+  form: any;
+
+  constructor(private formBuilder: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.form = this.formBuilder.group({
+      localidade: [''],
+      especialidade: [''],
+      convenio: [''],
+    });
+  }
 
   search() {
     this.response = this.doctor;

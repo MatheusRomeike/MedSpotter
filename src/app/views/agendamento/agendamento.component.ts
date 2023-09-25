@@ -1,11 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   templateUrl: './agendamento.component.html',
   styleUrls: ['./agendamento.component.scss'],
 })
-export class AgendamentoComponent {
-  @Input('form') form: any;
+export class AgendamentoComponent implements OnInit {
+  form: any;
 
   doctor = {
     name: 'Doutor Ricardo Lasmar',
@@ -19,6 +20,14 @@ export class AgendamentoComponent {
     ratingAvg: 4.8,
     ratingCount: 125,
   };
+  constructor(private formBuilder: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.form = this.formBuilder.group({
+      data: [''],
+      convenio: [''],
+    });
+  }
 
   agendar() {}
 }

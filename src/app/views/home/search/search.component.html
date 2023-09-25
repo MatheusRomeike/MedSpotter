@@ -17,15 +17,28 @@
                 <div class="row mt-3">
                   <mat-form-field class="col-3 mt-3">
                     <mat-label>Localidade</mat-label>
-                    <input matInput formControlName="localidade" />
+                    <select matNativeControl formControlName="localidade">
+                      <option value="1">São Paulo</option>
+                      <option value="2">Curitiba</option>
+                      <option value="2">Garuva</option>
+                      <option value="2">Conceição do Araguaia</option>
+                    </select>
                   </mat-form-field>
-                  <mat-form-field class="col-3 mt-3">
-                    <mat-label>Especialidade</mat-label>
-                    <input matInput formControlName="especialidade" />
-                  </mat-form-field>
+                  <ng-multiselect-dropdown
+                    class="col-4 mt-3"
+                    placeholder="Especialidades"
+                    [settings]="dropdownSettings"
+                    [data]="dropdownList"
+                    formControlName="especialidade"
+                  >
+                  </ng-multiselect-dropdown>
                   <mat-form-field class="col-3 mt-3">
                     <mat-label>Convênio</mat-label>
-                    <input matInput formControlName="convenio" />
+                    <select matNativeControl formControlName="convenio">
+                      <option value="1">Amil</option>
+                      <option value="2">Bradesco</option>
+                      <option value="2">Particular</option>
+                    </select>
                   </mat-form-field>
 
                   <div class="col-2 mt-3">
