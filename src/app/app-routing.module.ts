@@ -47,6 +47,13 @@ const routes: Routes = [
         (m) => m.DadosDoctorModule
       ),
   },
+  {
+    path: 'agendamento',
+    loadChildren: () =>
+      import('./views/agendamento/agendamento.module').then(
+        (m) => m.AgendamentoModule
+      ),
+  },
 ];
 
 @NgModule({

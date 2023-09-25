@@ -31,6 +31,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { StarRatingComponent } from './components/star-rating/star-rating.component';
 import { MatSelectModule } from '@angular/material/select';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
 
@@ -64,6 +65,7 @@ export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
     StarRatingComponent,
     MatSelectModule,
     NgMultiSelectDropDownModule,
+    MatDatepickerModule,
   ],
   imports: [
     CommonModule,
@@ -86,6 +88,7 @@ export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
     MatIconModule,
     MatSelectModule,
     NgMultiSelectDropDownModule.forRoot(),
+    MatDatepickerModule,
   ],
 })
 export class SharedModule {}

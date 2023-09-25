@@ -7,6 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginRootComponent } from './views/login/login-root/login-root.component';
+import { AgendamentoComponent } from './views/agendamento/agendamento.component';
 
 const authenticatorService = [Interceptor];
 

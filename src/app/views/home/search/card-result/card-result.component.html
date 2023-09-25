@@ -1,0 +1,27 @@
+<div class="card" style="cursor: pointer">
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV80d6yVXud_czITEsKfN0azmxWK8rVXUBNA&usqp=CAU"
+    alt="Generic placeholder image"
+    class="img-fluid img-thumbnail mt-3"
+    style="width: 100px"
+  />
+
+  <div class="card-body">
+    <h5 class="font-weight-bold" style="color: black">
+      {{ doctor?.name }}, {{ doctor?.ratingAvg }}
+      <mat-icon style="color: #ffcd3c">{{ "star" }}</mat-icon>
+    </h5>
+    <p class="card-text">
+      <b>Especialidades: </b>
+      <span *ngFor="let data of doctor?.specialties">{{
+        data?.description
+      }}</span
+      ><br />
+      <b>Convênios: </b>
+      <span *ngFor="let data of doctor?.convenios">{{
+        data?.description
+      }}</span>
+    </p>
+    <a href="#" class="btn btn-primary">Agendar</a>
+  </div>
+</div>
