@@ -7,6 +7,9 @@ import {
 } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginService } from '../../services/login.service';
+import { ToastrService } from 'ngx-toastr';
+import { AuthenticatorService } from 'src/app/shared/authenticator/authenticator.service';
 
 @Component({
   selector: 'app-register',
@@ -14,12 +17,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private loginService: LoginService,
+    private toastr: ToastrService,
+    private authenticatorService: AuthenticatorService
+  ) {}
 
   @Output() redirectToRegisterEvent: EventEmitter<boolean> = new EventEmitter();
 
   form = new FormGroup({
-    tipoUsuario: new FormControl('1', Validators.required),
+    tipo: new FormControl('1', Validators.required),
     nome: new FormControl('', [Validators.required, Validators.minLength(4)]),
     email: new FormControl('', Validators.required),
     cpf: new FormControl('', Validators.required),
@@ -33,8 +41,8 @@ export class RegisterComponent implements OnInit {
   senhaVisivel: boolean = false;
 
   ngOnInit(): void {
-    this.form.get('tipoUsuario')!.valueChanges.subscribe((tipoUsuario) => {
-      tipoUsuario == '1'
+    this.form.get('tipo')!.valueChanges.subscribe((tipo) => {
+      tipo == '1'
         ? this.form.get('crm')!.setValidators(null)
         : this.form.get('crm')!.setValidators(Validators.required);
     });
@@ -70,8 +78,26 @@ export class RegisterComponent implements OnInit {
     this.senhaVisivel = !this.senhaVisivel;
   }
 
-  register() {
-    this.router.navigate(['/']);
+  async register() {
+    try {
+      var usuario = this.form.value;
+      usuario.tipo =
+        this.form.get('tipo')!.value == '1' ? 'paciente' : 'medico';
+      var retorno: any = await this.loginService.registrarUsuario(usuario);
+      if (retorno?.token) {
+        this.toastr.success(
+          'Usuário ' + retorno.tipo + ' registrado com sucesso!',
+          'Sucesso'
+        );
+        this.authenticatorService.definirTipoUsuario(retorno.tipo);
+        this.authenticatorService.definirUsuarioId(retorno.id);
+        this.authenticatorService.definirToken(retorno.token);
+        this.router.navigate(['/']);
+      } else this.toastr.error('Erro ao registrar usuário!', 'Erro');
+    } catch (error: any) {
+      console.log(error);
+      this.toastr.error(error.error, 'Erro');
+    }
   }
 
   redirectToRegister() {

@@ -4,7 +4,7 @@
     <label class="float-end">Médico</label>
   </div>
   <mat-slider max="2" min="1">
-    <input matSliderThumb formControlName="tipoUsuario" />
+    <input matSliderThumb formControlName="tipo" />
   </mat-slider>
   <mat-form-field>
     <mat-label>Nome Completo</mat-label>
@@ -37,7 +37,7 @@
         <option value="2">Feminino</option>
       </select>
     </mat-form-field>
-    <div class="col-12 col-sm-6" *ngIf="form.get('tipoUsuario')!.value == '2'">
+    <div class="col-12 col-sm-6" *ngIf="form.get('tipo')!.value == '2'">
       <mat-form-field class="col-12">
         <mat-label>CRM</mat-label>
         <input matInput formControlName="crm" />

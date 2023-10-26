@@ -2,6 +2,8 @@ import { AuthenticatorService } from './../../../../shared/authenticator/authent
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginService } from '../../services/login.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +13,9 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
-    private authenticatorService: AuthenticatorService
+    private authenticatorService: AuthenticatorService,
+    private loginService: LoginService,
+    private toastr: ToastrService
   ) {}
 
   @Output() redirectToRegisterEvent: EventEmitter<boolean> = new EventEmitter();
@@ -25,14 +29,21 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  login() {
-    this.authenticatorService.definirTipoUsuario('medico');
-
-    this.authenticatorService.definirToken(
-      'eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTcwMzM3MDQ2OSwiaWF0IjoxNjkyODI5NjY5fQ.eTtSoeUUNkyORAJ-_vnutgQJx-ifRvcUjhHPHTY3N7Q'
-    );
-
-    this.router.navigate(['/']);
+  async login() {
+    try {
+      var usuario = this.form.value;
+      var retorno: any = await this.loginService.login(usuario);
+      if (retorno?.token) {
+        this.toastr.success('Usuário autenticado com sucesso!', 'Sucesso');
+        this.authenticatorService.definirTipoUsuario(retorno.tipo);
+        this.authenticatorService.definirUsuarioId(retorno.id);
+        this.authenticatorService.definirToken(retorno.token);
+        this.router.navigate(['/']);
+      } else this.toastr.error('Erro ao autenticar usuário!', 'Erro');
+    } catch (error: any) {
+      console.log(error);
+      this.toastr.error(error.error, 'Erro');
+    }
   }
 
   alternarVisibilidadeSenha() {

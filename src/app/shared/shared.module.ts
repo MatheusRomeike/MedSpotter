@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { AutoCompleteComponent } from './components/auto-complete/auto-complete.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';

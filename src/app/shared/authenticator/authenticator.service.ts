@@ -16,6 +16,18 @@ export class AuthenticatorService {
     localStorage.removeItem('token');
   }
 
+  public definirUsuarioId(usuarioId: string) {
+    localStorage.setItem('usuarioId', usuarioId);
+  }
+
+  public obterUsuarioId() {
+    return localStorage.getItem('usuarioId');
+  }
+
+  private limparUsuarioId() {
+    localStorage.removeItem('usuarioId');
+  }
+
   public definirTipoUsuario(tipoUsuario: string) {
     localStorage.setItem('tipoUsuario', tipoUsuario);
   }
@@ -31,6 +43,7 @@ export class AuthenticatorService {
   public limparDados() {
     this.limparToken();
     this.limparTipoUsuario();
+    this.limparUsuarioId();
   }
 
   public autenticado() {
