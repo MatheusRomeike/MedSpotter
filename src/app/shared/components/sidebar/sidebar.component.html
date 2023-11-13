@@ -8,7 +8,7 @@
     <a href="/search"><fa-icon [icon]="faHouse"></fa-icon>Início</a>
     <div [ngSwitch]="tipoUsuario" class="d-flex flex-column">
       <ng-container *ngSwitchCase="'paciente'">
-        <a href="/agendar-paciente"
+        <a href="/search"
           ><fa-icon [icon]="faCalendarCheck"></fa-icon>Agendar</a
         >
         <a href="/historico-paciente"
