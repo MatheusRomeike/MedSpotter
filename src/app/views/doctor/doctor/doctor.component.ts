@@ -19,8 +19,10 @@ export class DoctorComponent implements OnInit {
     ratingCount: 125,
   };
 
-  specialty: any;
-  constructor() {}
+
+
+  specialty: any
+  constructor() { }
 
   ngOnInit() {}
 
@@ -32,4 +34,7 @@ export class DoctorComponent implements OnInit {
       return this.specialty;
     }
   }
+
+
+
 }

@@ -19,7 +19,7 @@ const authenticatorService = [Interceptor];
     AuthGuard,
   ],
   bootstrap: [AppComponent],
-  exports: [AppComponent],
+  exports: [AppComponent, BrowserAnimationsModule],
   imports: [AppRoutingModule, BrowserAnimationsModule, SharedModule],
 })
 export class AppModule {}

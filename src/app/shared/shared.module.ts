@@ -24,6 +24,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {
   ErrorStateMatcher,
+  MatRippleModule,
   ShowOnDirtyErrorStateMatcher,
 } from '@angular/material/core';
 import { MatSliderModule } from '@angular/material/slider';
@@ -68,6 +69,7 @@ export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
     NgMultiSelectDropDownModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatRippleModule
   ],
   imports: [
     CommonModule,
@@ -92,6 +94,7 @@ export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
     NgMultiSelectDropDownModule.forRoot(),
     MatDatepickerModule,
     MatNativeDateModule,
+    MatRippleModule
   ],
 })
 export class SharedModule {}
